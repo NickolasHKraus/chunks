@@ -106,24 +106,24 @@ if __name__ == "__main__":
     d2 = {"a": {"a": b"byte"}}
     d3 = {"a": [{"a": b"byte"}]}
     d4a = {
-        'a': 'b',
-        'byte': b'byte',
-        'bytes': [b'byte', b'byte', b'byte'],
-        'c': {
-            'c1': None,
-            'c2': None,
-            'c3': None,
-            'c4': None
+        "a": "b",
+        "byte": b"byte",
+        "bytes": [b"byte", b"byte", b"byte"],
+        "c": {
+            "c1": None,
+            "c2": None,
+            "c3": None,
+            "c4": None
         },
-        'map': [{
-            'a': 'b',
-            'byte': b'byte',
-            'bytes': [b'byte', b'byte', b'byte'],
-            'c': {
-                'c1': None,
-                'c2': None,
-                'c3': None,
-                'c4': None
+        "map": [{
+            "a": "b",
+            "byte": b"byte",
+            "bytes": [b"byte", b"byte", b"byte"],
+            "c": {
+                "c1": None,
+                "c2": None,
+                "c3": None,
+                "c4": None
             }}]
     }
     d4b = copy.copy(d4a)
