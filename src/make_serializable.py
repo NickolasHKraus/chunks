@@ -6,11 +6,9 @@
 #
 # See: https://docs.python.org/3/library/json.html#json.JSONEncoder
 
-from typing import Any, Union
-
-import json
-
 import copy
+import json
+from typing import Any, Union
 
 
 def make_serializable_helper(x: Union[dict, list]) -> Union[dict, list]:
@@ -94,6 +92,7 @@ class JSONEncoderBytes(json.JSONEncoder):
 
     See: https://docs.python.org/3/library/json.html#json.JSONEncoder
     """
+
     def default(self, o):
         if isinstance(o, bytes):
             return o.decode()
@@ -109,22 +108,15 @@ if __name__ == "__main__":
         "a": "b",
         "byte": b"byte",
         "bytes": [b"byte", b"byte", b"byte"],
-        "c": {
-            "c1": None,
-            "c2": None,
-            "c3": None,
-            "c4": None
-        },
-        "map": [{
-            "a": "b",
-            "byte": b"byte",
-            "bytes": [b"byte", b"byte", b"byte"],
-            "c": {
-                "c1": None,
-                "c2": None,
-                "c3": None,
-                "c4": None
-            }}]
+        "c": {"c1": None, "c2": None, "c3": None, "c4": None},
+        "map": [
+            {
+                "a": "b",
+                "byte": b"byte",
+                "bytes": [b"byte", b"byte", b"byte"],
+                "c": {"c1": None, "c2": None, "c3": None, "c4": None},
+            }
+        ],
     }
     d4b = copy.copy(d4a)
     d4c = copy.copy(d4b)
