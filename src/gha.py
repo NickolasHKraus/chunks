@@ -4,6 +4,7 @@ from typing import List
 
 import yaml
 
+
 def run() -> dict:
     data = {"artifact_produced": False}
     # Determine if GitHub Actions workflow files produce Veracode
